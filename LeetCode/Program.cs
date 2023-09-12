@@ -1,19 +1,33 @@
-﻿
+﻿using LeetCode.Easy.MergeTwoSortedLists;
 
-LeetCode.Easy.RomanToInteger.Solution solution = new();
-//var result = solution.RomanToInt("III");
-//var result = solution.RomanToInt("LVIII"); // 58
-var result = solution.RomanToInt("MCMXCIV"); // 1994
+Solution solution = new();
+
+ListNode l14 = new ListNode(4, null);
+ListNode l12 = new ListNode(2, l14);
+ListNode l11 = new ListNode(1, l12);
+
+ListNode l24 = new ListNode(4, null);
+ListNode l23 = new ListNode(3, l24);
+ListNode l21 = new ListNode(1, l23);
 
 
 
-Console.WriteLine(result);
+var result = solution.MergeTwoLists(l11, l21);
+Console.WriteLine("End");
 
-/*foreach (int i in result)
+//Console.WriteLine(result);
+
+/*foreach (int r in result)
 {
-    Console.WriteLine(i);
+    Console.WriteLine(r);
 }*/
 
+//ListNode? resultList = l11;
+while (result.next != null)
+{
+    Console.WriteLine(result);
+    result = result.next;
+}
 
 
 
