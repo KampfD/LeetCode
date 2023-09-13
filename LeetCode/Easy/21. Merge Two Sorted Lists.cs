@@ -1,5 +1,5 @@
-﻿// Runtime: 
-// Memory Usage: 
+﻿// Runtime: 78ms Beats 75.98%
+// Memory Usage: 39.95MB Beats 66.14%
 namespace LeetCode.Easy.MergeTwoSortedLists;
 # nullable disable
 
@@ -14,8 +14,8 @@ public class ListNode
         this.val = val;
         this.next = next;
     }
-
-    public override string ToString()
+    
+    public override string ToString() // для отладки
     {
         return $"Val: {val}, Next: {(next != null ? next.val : "null")}";
     }
@@ -23,47 +23,26 @@ public class ListNode
 
 public class Solution
 {
+    // сортировка слиянием
     public ListNode MergeTwoLists(ListNode list1, ListNode list2)
     {
-        ListNode headListNode;
-        ListNode mergedListNode;
-        if (list1.val <= list2.val)
-        {
-            mergedListNode = list1;
-            list1 = list1.next;
-        }
-        else
-        {
-            mergedListNode = list2;
-            list2 = list2.next;
-        }
-        headListNode = mergedListNode;
-
-        while (list1 != null || list2 != null)
+        ListNode headListNode = new();
+        ListNode mergedListNode = headListNode;
+        while (list1 != null && list2 != null)
         {
             if (list1.val <= list2.val)
             {
-                mergedListNode = list1;
+                mergedListNode.next = list1;
                 list1 = list1.next;
             }
             else
             {
-                mergedListNode = list2;
+                mergedListNode.next = list2;
                 list2 = list2.next;
             }
-        }
-
-
-
-
-
-        /*while (mergedListNode.next != null)
-        {
             mergedListNode = mergedListNode.next;
         }
-        mergedListNode.next = list2;*/
-
-
-        return headListNode;
+        mergedListNode.next = list1 ?? list2;
+        return headListNode.next;
     }
 }

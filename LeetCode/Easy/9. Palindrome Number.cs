@@ -1,5 +1,5 @@
-﻿// Runtime: 52ms
-// Memory Usage: 29.97MB
+﻿// Runtime: 52ms Beats 42.89%
+// Memory Usage: 29.97MB Beats 62.90%
 namespace LeetCode.Easy.PalindromeNumber;
 
 public class Solution

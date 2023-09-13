@@ -1,5 +1,5 @@
-﻿// Runtime: 200ms
-// Memory Usage: 44.31MB
+﻿// Runtime: 200ms Beats 20.64%
+// Memory Usage: 44.31MB Beats 62.20%
 namespace LeetCode.Easy.TwoSum;
 
 public class Solution

@@ -2,13 +2,13 @@
 
 Solution solution = new();
 
-ListNode l14 = new ListNode(4, null);
-ListNode l12 = new ListNode(2, l14);
-ListNode l11 = new ListNode(1, l12);
+ListNode l14 = new(4, null);
+ListNode l12 = new(2, l14);
+ListNode l11 = new(1, l12);
 
-ListNode l24 = new ListNode(4, null);
-ListNode l23 = new ListNode(3, l24);
-ListNode l21 = new ListNode(1, l23);
+ListNode l24 = new(4, null);
+ListNode l23 = new(3, l24);
+ListNode l21 = new(1, l23);
 
 
 
@@ -23,11 +23,14 @@ Console.WriteLine("End");
 }*/
 
 //ListNode? resultList = l11;
-while (result.next != null)
+
+var outListNode = result;
+while (outListNode.next != null)
 {
-    Console.WriteLine(result);
-    result = result.next;
+    Console.WriteLine(outListNode);
+    outListNode = outListNode.next;
 }
+Console.WriteLine(outListNode);
 
 
 
