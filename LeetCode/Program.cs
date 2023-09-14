@@ -1,9 +1,9 @@
-﻿using LeetCode.Easy.SearchInsertPosition;
+﻿using LeetCode.Easy.PlusOne;
 
 Solution solution = new();
 
 
-var result = solution.SearchInsert(new int[] { 1, 3, 5 }, 1);
+var result = solution.PlusOne(new int[] { 9, 9, 9 });
 Console.WriteLine(result);
 
 
