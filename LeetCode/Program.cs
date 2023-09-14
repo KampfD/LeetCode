@@ -1,12 +1,9 @@
-﻿using LeetCode.Easy.FindTheIndexOfTheFirstOccurrenceInAString;
+﻿using LeetCode.Easy.SearchInsertPosition;
 
 Solution solution = new();
 
 
-var result = solution.StrStr("a", "a");
-
-Console.WriteLine("End");
-
+var result = solution.SearchInsert(new int[] { 1, 3, 5 }, 1);
 Console.WriteLine(result);
 
 
@@ -31,7 +28,7 @@ Console.WriteLine(outListNode);*/
 
 
 
-
+Console.WriteLine("End");
 ConsoleKeyInfo keyInfo;
 do keyInfo = Console.ReadKey();
 while (keyInfo.Key != ConsoleKey.Enter);
