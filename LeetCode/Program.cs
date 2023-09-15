@@ -1,9 +1,31 @@
-﻿using LeetCode.Easy.AddBinary;
+﻿using System.Linq;
+using LeetCode.Easy.MergeTwoSortedLists;
+
 
 Solution solution = new();
 
 
-var result = solution.AddBinary("11", "1");
+var result = solution.MergeTwoLists(
+    new ListNode(1, new ListNode(2, new ListNode(4))),
+    new ListNode(1, new ListNode(3, new ListNode(4))));
+
+
+
+List<int> valueList = new();
+List<int> patternList = new() { 1, 1, 2, 3, 4, 5 };
+
+while (result.next != null)
+{
+    valueList.Add(result.val);
+    result = result.next;
+}
+valueList.Add(result.val);
+
+
+
+var r =
+patternList.SequenceEqual<int>(valueList);
+
 Console.WriteLine(result);
 
 
