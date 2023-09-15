@@ -1,9 +1,9 @@
-﻿using LeetCode.Easy.PlusOne;
+﻿using LeetCode.Easy.AddBinary;
 
 Solution solution = new();
 
 
-var result = solution.PlusOne(new int[] { 9, 9, 9 });
+var result = solution.AddBinary("11", "1");
 Console.WriteLine(result);
 
 
